@@ -15,6 +15,20 @@
     <button class="button" type="submit">ログアウト</button>
 </form>
 
+<ul class="header-nav">
+    @if (Auth::check())
+    <li class="header-nav__item">
+        <a class="header-nav__link" href="/mypage">マイページ</a>
+    </li>
+    <li class="header-nav__item">
+        <form action="/logout" method="post">
+        @csrf
+        <button class="header-nav__button">ログアウト</button>
+        </form>
+    </li>
+    @endif
+</ul>
+
 <ul class="article-list">
     <li class="article-item">
         <h2>記事タイトル 1</h2>

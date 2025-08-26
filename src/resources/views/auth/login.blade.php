@@ -7,11 +7,11 @@
 
 @section('content')
 <h1>ログイン</h1>
-<form action="" method="post">
+<form action="/login" method="post">
     @csrf 
     <dl class="form-list">
         <dt>メールアドレス</dt>
-        <dd><input class="input-form" type="email" name="email" value=""></dd>
+        <dd><input class="input-form" type="email" name="email" value="{{ old('email') }}"></dd>
         <dt>パスワード</dt>
         <dd><input class="input-form" type="password" name="password"></dd>
     </dl>
